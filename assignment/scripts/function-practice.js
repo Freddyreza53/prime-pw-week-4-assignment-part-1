@@ -119,12 +119,23 @@ function sumAll(numArray) {
 }
 
 console.log(`Test : ${sumAll([2, 3, 5])}`);
+
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 
+function allPositive(myArray) {
+  let newArray = [];
 
+  for (let i = 0; i < myArray.length; i++) {
+    if (myArray[i] > 0) {
+      newArray.push(myArray[i]);
+    } // end if statement
+  } // end for loop
+  return newArray;
+}
 
+console.log(allPositive([2, ,0, -3, 5, -6, 3]));
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
