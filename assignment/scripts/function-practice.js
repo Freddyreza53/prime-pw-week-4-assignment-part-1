@@ -64,7 +64,8 @@ function getLast( array ) {
   }
 }
 
-console.log(`Test : ${getLast([1])}`);
+console.log(`Test : ${getLast(['j', 'k'])}`);
+
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
