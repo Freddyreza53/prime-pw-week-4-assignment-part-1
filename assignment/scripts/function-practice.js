@@ -135,7 +135,7 @@ function allPositive(myArray) {
   return newArray;
 }
 
-console.log(allPositive([2, ,0, -3, 5, -6, 3]));
+console.log('Test :', allPositive([2, ,0, -3, 5, -6, 3]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
@@ -166,4 +166,4 @@ function minMax(minMaxArray) {
   return theArray;
 }
 
-console.log(minMax([1, 2, 3, 4, 5]));
+console.log('Test :', minMax([1, 2, 3, 4, 5]));
