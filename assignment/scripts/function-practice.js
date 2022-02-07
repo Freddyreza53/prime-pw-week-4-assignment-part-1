@@ -136,6 +136,34 @@ function allPositive(myArray) {
 }
 
 console.log(allPositive([2, ,0, -3, 5, -6, 3]));
+
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+// --------- Find the Smallest and Biggest Numbers ---------
+// Create a function that takes an array of numbers and returns
+// both the minimum and maximum numbers, in that order.
+// Example: minMax([1, 2, 3, 4, 5]) -> [1, 5]
+
+function minMax(minMaxArray) {
+  let theArray = [];
+  let min = minMaxArray[0];
+  let max = minMaxArray[0];
+
+  for (let i = 0; i < minMaxArray.length; i++) {
+    if (max < minMaxArray[i]) {
+      max = minMaxArray[i];
+    } // end if statement
+
+    if (min > minMaxArray[i]) {
+      min = minMaxArray[i];
+    } // end if statement
+  } // end for loop
+
+  theArray.push(min);
+  theArray.push(max);
+
+  return theArray;
+}
+
+console.log(minMax([1, 2, 3, 4, 5]));
