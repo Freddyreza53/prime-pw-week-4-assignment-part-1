@@ -70,9 +70,23 @@ console.log(`Test : ${getLast(['j', 'k'])}`);
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 function find( value, array ){
+  let isValue = 0;
 
-}
+  for (let i = 0; i < array.length; i++) {
+    if (value == array[i]){
+      isValue++;
+    } // end if statement
+  } // end for loop
 
+  if (isValue > 0){
+    return true;
+  } // end if statement
+  else {
+    return false;
+  } // end else statement
+} // end function find
+
+console.log(`Test : ${find(5, [2, 4, 5, 0])}`);
 // ----------------------
 // Stretch Goals
 // ----------------------
