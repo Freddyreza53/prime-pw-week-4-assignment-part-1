@@ -22,9 +22,8 @@ console.log(`Test : ${helloName('Stacy')}`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
-  let num = firstNumber + secondNumber;
+  return firstNumber + secondNumber;
   // return firstNumber + secondNumber;
-  return num;
 }
 
 console.log(`Test : ${addNumbers(12, 4)}`);
