@@ -18,7 +18,7 @@ function helloName( name ) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log(`Test : ${helloName('Stacy')}`);
+console.log(`Test should say "Hello, Stacy!" : ${helloName('Stacy')}`);
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -26,14 +26,14 @@ function addNumbers( firstNumber, secondNumber ) {
   // return firstNumber + secondNumber;
 }
 
-console.log(`Test : ${addNumbers(12, 4)}`);
+console.log(`Test should say "16" : ${addNumbers(12, 4)}`);
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( firstNum, secondNum, thirdNum ){
   let sum = firstNum * secondNum * thirdNum;
   return sum;
 }
-console.log(`Test : ${multiplyThree(0, 10, 3)}`);
+console.log(`Test should say "0"  : ${multiplyThree(0, 10, 3)}`);
 
 // 5. Function that will return true if a number is positive,
 //    or greater than zero, and false otherwise
@@ -63,7 +63,7 @@ function getLast( array ) {
   }
 }
 
-console.log(`Test : ${getLast(['j', 'k'])}`);
+console.log(`Test should say "l" : ${getLast(['j', 'k', 'l'])}`);
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
@@ -85,7 +85,7 @@ function find( value, array ){
   } // end else statement
 } // end function find
 
-console.log(`Test : ${find(5, [2, 4, 5, 0])}`);
+console.log(`Test should say true : ${find(5, [2, 4, 5, 0])}`);
 
 // ----------------------
 // Stretch Goals
@@ -117,7 +117,7 @@ function sumAll(numArray) {
   return sum;
 }
 
-console.log(`Test : ${sumAll([2, 3, 5])}`);
+console.log(`Test should say "10" : ${sumAll([2, 3, 5])}`);
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
@@ -134,7 +134,7 @@ function allPositive(myArray) {
   return newArray;
 }
 
-console.log('Test :', allPositive([2, ,0, -3, 5, -6, 3]));
+console.log('Test should say "[2, 5, 3]":', allPositive([2, ,0, -3, 5, -6, 3]));
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
@@ -165,4 +165,4 @@ function minMax(minMaxArray) {
   return theArray;
 }
 
-console.log('Test :', minMax([1, 2, 3, 4, 5]));
+console.log('Test should say "[1, 5]":', minMax([1, 2, 3, 4, 5]));
