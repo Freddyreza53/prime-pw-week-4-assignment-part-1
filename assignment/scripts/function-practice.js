@@ -112,7 +112,7 @@ function sumAll(numArray) {
   let sum = 0
   // TODO: loop to add items
   for (let i = 0; i < numArray.length; i++) {
-    sum += numArray[i]
+    sum += numArray[i];
   } // end for loop
   return sum;
 }
@@ -143,7 +143,7 @@ console.log('Test should say "[2, 5, 3]":', allPositive([2, ,0, -3, 5, -6, 3]));
 // Create a function that takes an array of numbers and returns
 // both the minimum and maximum numbers, in that order.
 // Example: minMax([1, 2, 3, 4, 5]) -> [1, 5]
-
+console.log('--------- Find the Smallest and Biggest Numbers ---------');
 function minMax(minMaxArray) {
   let theArray = [];
   let min = minMaxArray[0];
@@ -166,3 +166,83 @@ function minMax(minMaxArray) {
 }
 
 console.log('Test should say "[1, 5]":', minMax([1, 2, 3, 4, 5]));
+
+// --------- Tile Teamwork Tactics ---------
+// In a board game, a piece may advance 1-6 tiles forward depending on the
+//number rolled on a six-sided dice. If you advance your piece onto the same
+// tile as another player's piece, both of you earn a bonus.
+//
+// Can you reach your friend's tile number in the next roll?
+// Create a function that takes your position a and your friend's position b and
+// returns a boolean representation of whether it's possible to earn a bonus on
+// any dice roll.
+//
+// Examples
+// possibleBonus(3, 7) ➞ true
+// possibleBonus(1, 9) ➞ false
+// possibleBonus(5, 3) ➞ false
+// Notes:
+// You cannot move backward (which is why example #3 doesn't work).
+// If you are already on the same tile, return false, as you would be advancing
+// away. Expect only positive integer inputs.
+console.log('--------- Tile Teamwork Tactics ---------');
+function possibleBonus(a, b) {
+  if (a === b) {
+    return false;
+  }
+  else if (a > b) {
+    while ((a - b) > 6 || (b - a) <= 2) {
+      return false;
+    }
+    return true;
+  }
+  else if (b > a) {
+    while ((b - a) > 6) {
+      return false
+    }
+    return true;
+  }
+}
+
+console.log(possibleBonus(3, 7));
+console.log(possibleBonus(1, 9));
+console.log(possibleBonus(5, 3));
+
+// --------- War of Numbers ---------
+// There's a great war between the even and odd numbers. Many numbers already
+// lost their lives in this war and it's your task to end this. You have to
+// determine which group sums larger: the evens, or the odds. The larger group wins.
+//
+// Create a function that takes an array of integers, sums the even and odd
+// numbers separately, then returns the difference between the sum of the even
+// and odd numbers.
+//
+// Examples
+// warOfNumbers([2, 8, 7, 5]) ➞ 2
+// 2 + 8 = 10
+// 7 + 5 = 12
+// 12 is larger than 10
+// So we return 12 - 10 = 2
+// warOfNumbers([12, 90, 75]) ➞ 27
+//
+// warOfNumbers([5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243]) ➞ 168
+// Notes: The given array contains only positive integers.
+console.log('--------- War of Numbers ---------');
+function warOfNumbers (array) {
+  let evenNum = 0;
+  let oddNum = 0;
+
+  for (let num of array) {
+    if (num % 2 === 0) {
+      evenNum += num;
+    }
+    else {
+      oddNum += num;
+    }
+  }
+  return Math.abs(evenNum - oddNum);
+}
+
+console.log(warOfNumbers([2, 8, 7, 5]));
+console.log(warOfNumbers([12, 90, 75]));
+console.log(warOfNumbers([5, 9, 45, 6, 2, 7, 34, 8, 6, 90, 5, 243]));
